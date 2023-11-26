@@ -1,0 +1,188 @@
+<html lang="en">
+    <head>
+        <style>
+               body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+              header {
+            background-color: rgb(188, 149, 71);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            
+        }
+        #logo {
+           
+           max-width: 150px;
+           position: relative;
+           margin: 0 auto;
+           
+           width: 90px;
+           height: 90px;
+       }
+       nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 10px;
+        }
+      article {
+        color: #444;
+      }
+
+      footer {
+            background-color: #333;
+            padding: 2em;
+            
+        }
+        footer p{
+            color: #f4f4f4;
+        }
+
+        </style>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <img id="logo" src="pics/o.png" alt="شعار الموقع">
+            <h1>The history of KFUPM</h1>
+        </header>
+    
+        <nav>
+            <a href="index.html" >Home</a>
+            <a href="history.html"> History</a>
+            <a href="Photo.html"> Photo Gallry</a>
+            <a href="Achievments.html"> Achievments</a>
+            <a href="contact us.html"> Contact Us</a>
+            <a href="calculator.html"> Use our calculator!</a>
+        </nav>
+        
+        <h1 id="header">Our calculator created using java!</h1>
+
+        <table>
+            <tr>
+                <td>Value 1</td>
+        <td><input id="t1" type="text"></td>
+            </tr>
+            <tr>
+                <td>Value 2</td>
+                <td><input id="t2" type="text"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                <input id="b1" type="button" value="+" onclick="add()">
+                <input id="b2" type="button" value="-" onclick="sub()">
+                <input id="b3" type="button" value="*" onclick="mul()">
+                <input id="b4" type="button" value="/" onclick="div()">
+                </td>
+            </tr>
+            <tr>
+                <td>Result</td>
+                <td><input id="res" type="text"></td>
+            </tr>
+        </table>
+    </body>
+    <script>
+                           c = document.getElementById("res");
+                           h1 = document.getElementById("header");
+
+        t1.addEventListener("mouseover", kk);
+        t1.addEventListener("focus", kk);
+        t1.addEventListener("mouseout", WhiteColor);
+        t2.addEventListener("mouseover", kk);
+        t2.addEventListener("mouseout", WhiteColor);
+        c.addEventListener("mouseover", kk);
+        c.addEventListener("mouseout", WhiteColor);
+        h1.addEventListener("click", hh1);
+        h1.addEventListener("dblclick", hhh1);
+
+        function hhh1(){
+            document.body.style.backgroundColor="LightGreen";
+        }
+
+        function hh1(){
+            document.body.style.backgroundColor="LightBlue";
+        }
+
+        function WhiteColor(){
+            document.body.style.backgroundColor="White";
+        }
+        
+
+
+        function kk(){
+            document.getElementById("t1").style.backgroundColor="Black";
+            document.getElementById("t1").style.color="white";
+            document.body.style.backgroundColor="Gray";
+            document.getElementById("t2").style.backgroundColor="Black";
+            document.getElementById("t2").style.color="white";
+            document.getElementById("res").style.backgroundColor="Black";
+            document.getElementById("res").style.color="white";
+            document.getElementById("t1");
+
+        }
+
+
+
+        
+        function add()
+                {
+ 
+        var num1 = document.getElementById("t1").value;
+        var num2 = document.getElementById("t2").value;
+        var x = parseInt(num1);
+        var y = parseInt(num2);
+        var c = document.getElementById("res").value=x+y;
+}
+     
+        function sub()
+                {
+ 
+        var num1 = document.getElementById("t1").value;
+        var num2 = document.getElementById("t2").value;
+        var x = parseInt(num1);
+        var y = parseInt(num2);
+        var c = document.getElementById("res").value=x-y;
+}
+
+     
+        function mul()
+                {
+ 
+        var num1 = document.getElementById("t1").value;
+        var num2 = document.getElementById("t2").value;
+        var x = parseInt(num1);
+        var y = parseInt(num2);
+        var c = document.getElementById("res").value=x*y;
+}
+
+     
+        function div()
+                {
+ 
+        var num1 = document.getElementById("t1").value;
+        var num2 = document.getElementById("t2").value;
+        var x = parseInt(num1);
+        var y = parseInt(num2);
+        var c = document.getElementById("res").value=x/y;
+}
+var h1 = document.getElementById("header").value;
+
+    </script>
+       <footer>
+        <p>CIT 112 Project Group 6</p>
+    </footer>
+     
+    </body>
+</html>
